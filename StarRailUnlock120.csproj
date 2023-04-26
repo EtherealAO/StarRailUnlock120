@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <StartupObject>StarRailUnlock120.Program</StartupObject>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
