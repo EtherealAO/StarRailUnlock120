@@ -12,7 +12,7 @@ namespace StarRailUnlock120
     {
         public static void Main()
         {
-            var node = Registry.CurrentUser.OpenSubKey("Software")?.OpenSubKey("miHoYo")?.OpenSubKey("崩坏：星穹铁道");
+            var node = Registry.CurrentUser.OpenSubKey("Software")?.OpenSubKey("miHoYo")?.OpenSubKey("崩坏：星穹铁道", true);
             if (node == null)
             {
                 Console.WriteLine("打开注册表失败，请尝试至少运行一次游戏");
