@@ -13,6 +13,12 @@ namespace StarRailUnlock120
     {
         public static void Main()
         {
+            CN();
+            INTL();
+            Console.ReadLine();
+        }
+        static void CN()
+        {
             var node = Registry.CurrentUser.OpenSubKey("Software")?.OpenSubKey("miHoYo")?.OpenSubKey("崩坏：星穹铁道", true);
             if (node == null)
             {
@@ -39,7 +45,9 @@ namespace StarRailUnlock120
             json["FPS"] = 120;
             node.SetValue(keyName, Encoding.UTF8.GetBytes(json.ToString(Newtonsoft.Json.Formatting.None)));
             Console.WriteLine("国服设置完成");
-
+        }
+        static void INTL()
+        {
             var intlNode = Registry.CurrentUser.OpenSubKey("Software")?.OpenSubKey("Cognosphere")?.OpenSubKey("Star Rail", true);
             if (intlNode != null)
             {
@@ -63,8 +71,6 @@ namespace StarRailUnlock120
                 intlNode.SetValue(intlKeyName, Encoding.UTF8.GetBytes(intlJson.ToString(Newtonsoft.Json.Formatting.None)));
                 Console.WriteLine("国际服设置完成");
             }
-
-            Console.ReadLine();
         }
     }
 }
